@@ -28,12 +28,9 @@ namespace Page500GoFishStore
             cards = new List<Card>(initialCards);
         }
 
-        public int Count { get { return cards.Count; } }
+        public int Count => cards.Count;
 
-        public void Add(Card cardToAdd)
-        {
-            cards.Add(cardToAdd);
-        }
+        public void Add(Card cardToAdd) => cards.Add(cardToAdd);
 
         public Card Deal(int index)
         {
@@ -42,10 +39,7 @@ namespace Page500GoFishStore
             return CardToDeal;
         }
 
-        public Card Deal()
-        {
-            return Deal(0);
-        }
+        public Card Deal() => Deal(0);
 
         public void Shuffle()
         {
@@ -69,15 +63,9 @@ namespace Page500GoFishStore
             return cardNames;
         }
 
-        public void SortByValue()
-        {
-            cards.Sort(new CardComparer_byValue());
-        }
+        public void SortByValue() => cards.Sort(new CardComparer_byValue());
 
-        public Card Peek(int cardNumber)
-        {
-            return cards[cardNumber];
-        }
+        public Card Peek(int cardNumber) => cards[cardNumber];
 
         public bool ContainsValue(Values value)
         {

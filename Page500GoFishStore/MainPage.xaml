@@ -68,11 +68,11 @@
                 <Button x:Name="startButton" Margin="20,0,20,3" Content="Start The Game" IsEnabled="{Binding GameNotStarted}" VerticalAlignment="Bottom" Click="startButton_Click"/>
             </StackPanel>
             <TextBlock Margin="0,20,0,20" Text="Game Progress" Style="{StaticResource SubheaderTextBlockStyle}" Grid.Row="2"/>
-            <ScrollViewer x:Name="GameLog" Grid.Row="3" FontSize="12" Background="White" Foreground="Black" Content="{Binding GameProgress}" Padding="5"/>
+            <ScrollViewer x:Name="GameLog" Grid.Row="3" FontSize="12" Background="White" Foreground="Black" Content="{Binding GameProgress}" Padding="5" VerticalScrollMode="Auto"/>
             <TextBlock Text="Books" Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,20,0,20" Grid.Row="4"/>
             <ScrollViewer x:Name="BookList" FontSize="24" Background="White" Foreground="Black" Grid.Row="5" Grid.RowSpan="2" Content="{Binding Books}"/>
             <TextBlock Text="Your Hand" Style="{StaticResource SubheaderTextBlockStyle}" Grid.Row="0" Grid.Column="2" Margin="0,0,0,20"/>
-            <ListBox x:Name="Cards" Background="White" FontSize="24" Height="auto" Margin="0,0,0,20" Grid.Row="1" Grid.RowSpan="5" Grid.Column="2" IsEnabled="{Binding GameInProgress}" ItemsSource="{Binding Hand}" DoubleTapped="cards_DoubleTapped"/>
+            <ListBox x:Name="Cards" Background="White" FontSize="16" Height="auto" Margin="0,0,0,20" Grid.Row="1" Grid.RowSpan="5" Grid.Column="2" IsEnabled="{Binding GameInProgress}" ItemsSource="{Binding Hand}" DoubleTapped="cards_DoubleTapped"/>
             <Button x:Name="askForACard" Content="Ask for a Card" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="6" Grid.Column="2" IsEnabled="{Binding GameInProgress}" Click="askForACard_Click"/>
         </Grid>
     </Grid>

@@ -45,11 +45,6 @@ namespace Page500GoFishStore
             Deal();
             players[0].SortHand();
             UpdateHand();
-            if (GameInProgress)
-            {
-                AddProgress(DescribePlayerHands());
-            }
-            OnPropertyChanged("BookList");
         }
 
         private void UpdateHand()
@@ -59,6 +54,11 @@ namespace Page500GoFishStore
             {
                 Hand.Add(cardName);
             }
+            if (!GameInProgress)
+            {
+                AddProgress(DescribePlayerHands());
+            }
+            OnPropertyChanged("BookList");
             OnPropertyChanged("Cards");
         }
 
