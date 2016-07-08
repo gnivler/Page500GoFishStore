@@ -54,11 +54,11 @@ namespace Page500GoFishStore
             {
                 Hand.Add(cardName);
             }
-            if (!GameInProgress)
+            if (GameInProgress)
             {
                 AddProgress(DescribePlayerHands());
             }
-            OnPropertyChanged("BookList");
+            OnPropertyChanged("Books");
             OnPropertyChanged("Cards");
         }
 
@@ -178,14 +178,15 @@ namespace Page500GoFishStore
                 if (stock.Count == 0)
                 {
                     AddProgress($"The stock is out of cards, game over!");
-                    //return true;
+                    AddProgress(GetWinnerName());
+                    ResetGame();
+                    return;
                 }
             }
 
             UpdateHand();
             AddProgress($"--------------- End of round {round} ---------------");
             round++;
-            //return false;
         }
 
         public bool PullOutBooks(Player player)
@@ -217,7 +218,7 @@ namespace Page500GoFishStore
             string bookString = "";
             foreach (Values value in books.Keys)
             {
-                bookString += $"{books[value].Name} has a book of {Card.Plural(value)}.";
+                bookString += $"{books[value].Name} has a book of {Card.Plural(value)}.{Environment.NewLine}";
             }
             return bookString;
         }
@@ -275,7 +276,7 @@ namespace Page500GoFishStore
                     }
                 }
             }
-            return $"{winnerString} with {theMostBooks} books.";
+            return $"{winnerString} won, with {theMostBooks} books.";
         }
 
         public IEnumerable<string> GetPlayerCardNames()

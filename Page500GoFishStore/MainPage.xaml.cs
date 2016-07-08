@@ -116,6 +116,8 @@ namespace Page500GoFishStore
         private void cards_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
             game.PlayOneRound(Cards.SelectedIndex);
+            GameLog.ChangeView(null, 0 /*GameLog.ScrollableHeight*/, null);
         }
+
     }
 }
