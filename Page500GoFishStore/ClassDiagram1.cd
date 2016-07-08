@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Page500GoFishStore.Card">
+    <Position X="6.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIABAAAAAAAQEAAAAAASAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Card.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Page500GoFishStore.Deck">
+    <Position X="8" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CAIAAAAAAAAEAAAABAgAAAQAAAAAAAAAAAQIBAAAEBA=</HashCode>
+      <FileName>Deck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Page500GoFishStore.Game">
+    <Position X="12.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEABAQACSAAgAkAIACAAAAwgAAEAIAgIgCIAIAAAQA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Page500GoFishStore.Player">
+    <Position X="10" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAACAAQAEAAAAAAgAEAQAAAAEAAAIAAxABgAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Page500GoFishStore.Suits">
+    <Position X="6.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAEAAAAAAAAABAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Suits.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Page500GoFishStore.Values">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAggAAAEAAEAIAAAAAFBAAAAAgAAAgAAEE=</HashCode>
+      <FileName>Values.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

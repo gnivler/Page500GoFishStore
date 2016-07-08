@@ -132,6 +132,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Page500GoFishStore_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
