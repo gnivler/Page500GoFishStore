@@ -26,7 +26,7 @@ namespace Page500GoFishStore
 
         public Game()
         {
-            PlayerName = "Mason";
+            PlayerName = "Enter your name";
             Hand = new ObservableCollection<string>();
             ResetGame();
         }

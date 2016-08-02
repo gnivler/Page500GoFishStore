@@ -105,7 +105,10 @@ namespace Page500GoFishStore
 
         private void askForACard_Click(object sender, RoutedEventArgs e)
         {
-            game.PlayOneRound(Cards.SelectedIndex);
+            if (Cards.SelectedIndex >= 0)
+            {
+                game.PlayOneRound(Cards.SelectedIndex);
+            }
         }
 
         private void startButton_Click(object sender, RoutedEventArgs e)
@@ -115,8 +118,12 @@ namespace Page500GoFishStore
 
         private void cards_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
-            game.PlayOneRound(Cards.SelectedIndex);
-            GameLog.ChangeView(null, 0 /*GameLog.ScrollableHeight*/, null);
+            if (Cards.SelectedIndex >= 0)
+            {
+                game.PlayOneRound(Cards.SelectedIndex);
+                GameLog.ChangeView(null, 0 /*GameLog.ScrollableHeight*/, null);
+            }
+            
         }
 
     }
